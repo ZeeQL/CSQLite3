@@ -10,7 +10,7 @@
 #      include "/usr/include/sqlite3.h"
 #    else
 //     I guess we always want this in the SPM package.
-#      include "/Applications/Xcode/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sqlite3.h"
+#      include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sqlite3.h"
 #    endif
 #  endif
 #else
