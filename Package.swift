@@ -1,17 +1,12 @@
+// swift-tools-version:4.2
 import PackageDescription
 
 let package = Package(
-  name: "CSQLite3",
-
-  // pkgConfig: "sqlite3",
-	
-  providers: [
-    .Brew("sqlite3"),
-    .Apt("sqlite3-dev")
-  ],	
-	
-  exclude: [
-    "README.md",
-    "LICENSE"
-  ]
+    name: "CSQLite3",
+    products: [
+        .library(name: "CSQLite3", targets: ["CSQLite3"]),
+    ],
+    targets: [
+        .systemLibrary(name: "CSQLite3")
+    ]
 )
