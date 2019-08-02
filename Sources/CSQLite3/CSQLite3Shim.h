@@ -2,7 +2,9 @@
 #define __CSQLITE3_SHIM_H__
 
 #if defined(__APPLE__) && defined(__MACH__)
-#  if __clang_major__ >= 9 // released now. assume Xcode 9.
+#  if __clang_major__ >= 11 // Xcode 11 Beta 
+#    include "/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sqlite3.h"
+#  elif __clang_major__ >= 9 // released now. assume Xcode 9.
 #    include "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sqlite3.h"
 #  else
 #    if 0
